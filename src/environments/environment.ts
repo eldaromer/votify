@@ -5,7 +5,8 @@
 
 
 export const environment = {
-  production: false
+  production: false,
+  redirect: 'http://localhost:4200/index'
 };
 
 

@@ -1,3 +1,5 @@
+import {environment} from '../../environments/environment';
+
 interface AuthConfig {
   CLIENT_ID: string;
   CLIENT_DOMAIN: string;
@@ -10,6 +12,6 @@ export const AUTH_CONFIG: AuthConfig = {
   CLIENT_ID: 'SaQ5kfUMewvxAtQDHdjZ4EcyivmQR4uB',
   CLIENT_DOMAIN: 'eldaromer.auth0.com',
   AUDIENCE: 'https://eldaromer.auth0.com/userinfo',
-  REDIRECT: 'http://localhost:4200/index',
+  REDIRECT: environment.redirect,
   SCOPE: 'openid'
 };

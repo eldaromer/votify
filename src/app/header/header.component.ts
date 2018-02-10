@@ -9,12 +9,11 @@ import {AuthService} from "../auth/auth.service";
 })
 export class HeaderComponent implements OnInit {
 
-  authorized: boolean;
+  collapse: boolean = true;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.authorized = this.authService.isAuthenticated();
   }
 
   login() {
@@ -23,6 +22,10 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.authService.logout();
+  }
+
+  authorized() {
+    return this.authService.isAuthenticated();
   }
 
 }

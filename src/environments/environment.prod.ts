@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  redirect: 'http://localhost:3000/index'
 };
