@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
+  options: any[] = [];
+  name: string = '';
+  title: string = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public addOption(option) {
+    if(option !== '') {
+      this.options.push(option);
+      this.name='';
+    }
+  }
+
+  public removeOption(option) {
+    if (this.options.includes(option)) {
+      this.options.splice(this.options.indexOf(option), 1);
+    }
   }
 
 }

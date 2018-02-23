@@ -1,3 +1,24 @@
-<p>
-  create works!
-</p>
+<div class="jumbotron">
+  <div class="col-sm-8 mx-auto">
+    <h1>Select your options below.</h1>
+  </div>
+</div>
+<input type="text" class="form-control" id="title" placeholder="Name your poll" [(ngModel)]="title">
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Add option" [(ngModel)]="name">
+  <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)="addOption(name)">Add</button>
+  </span>
+</div>
+<div class="list-group">
+  <div class="list-group-item list-group-item-action" *ngFor="let option of options">
+    <span class="pull-left" id="option">{{option}}</span>
+    <span class="pull-right">
+      <span class="btn btn-xs btn-default" id="remove" (click)="removeOption(option)">
+        <span class="fa fa-times"></span>
+      </span>
+    </span>
+  </div>
+</div>
+
+<button class="btn btn-primary" type="button">Create!</button>
