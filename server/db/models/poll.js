@@ -5,12 +5,22 @@ module.exports = (sequelize, DataTypes) => {
     title: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    options: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false
+    },
+    votes: {
+      type: DataTypes.ARRAY(DataTypes.STRING)
     }
   }, {});
 
 
   Poll.associate = function(models) {
-    // associations can be defined here
+    Poll.belongsTo(models.User, {
+      foreignKey: 'userId',
+      onDelete: 'CASCADE  '
+    });
   };
 
   return Poll;

@@ -13,15 +13,7 @@ export class MainComponent implements OnInit {
   redirect;
 
   constructor(public auth: AuthService, private router: Router) {
-    auth.handleAuthentication(() => {
-      this.redirect = sessionStorage.getItem('redirect');
 
-      if (this.redirect !== null) {
-        sessionStorage.removeItem('redirect');
-        console.log(this.redirect);
-        router.navigateByUrl(this.redirect);
-      }
-    });
 
   }
 
