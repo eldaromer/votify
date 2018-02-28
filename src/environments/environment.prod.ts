@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  redirect: 'http://localhost:3000/index'
+  API_URL: 'localhost:3000/api'
 };
