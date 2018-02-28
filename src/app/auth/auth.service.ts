@@ -18,7 +18,7 @@ export class AuthService {
   }
 
   public isAuthenticated() {
-    return true;
+    return !(localStorage.getItem('token')===null);
   }
 
 }
