@@ -1,3 +1,10 @@
-<p>
-  login works!
-</p>
+<input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
+<input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+<div class="input-group">
+  <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" (click)="login()">Login</button>
+  </span>
+  <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" routerLink="/signup">Signup</button>
+  </span>
+</div>
