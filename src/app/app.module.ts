@@ -10,6 +10,8 @@ import { MainComponent } from './main/main.component';
 import {AuthService} from "./auth/auth.service";
 import { CreateComponent } from './create/create.component';
 import {AuthGuardService} from "./auth/auth-guard.service";
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {AuthGuardService} from "./auth/auth-guard.service";
     AppComponent,
     HeaderComponent,
     MainComponent,
-    CreateComponent
+    CreateComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
